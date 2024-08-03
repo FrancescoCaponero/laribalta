@@ -5,7 +5,7 @@ Tags: svg, vector, safesvg, safe svg, sanitization, sanitisation, sanitizer, san
 Requires at least: 4.8
 Tested up to: 6.6.1
 Requires PHP: 7.2
-Stable tag: 2.5.6
+Stable tag: 2.5.7
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -160,6 +160,9 @@ You need to add the mime type for svg and svgz to: "MLA Settings > Media Library
 
 
 == Changelog ==
+
+= 2.5.7 =
+* Compatibility with newer versions of php.
 
 = 2.5.6 =
 * Addressed some security concerns.
@@ -395,6 +398,10 @@ You need to add the mime type for svg and svgz to: "MLA Settings > Media Library
 
 
 == Upgrade Notice ==
+
+= 2.5.7 =
+This update addresses issues with newer PHP versions.
+
 = 2.5.6 =
 This update addresses some security concerns.
 
