@@ -44,23 +44,6 @@
                                 <?php
                                 printMainMenu();
                                 ?>
-
-                                <div class="search-block-form">
-
-                                    <form role="search" method="get" class="search-form"
-                                        action="<?php esc_url(home_url('/')) ?>">
-                                        <div class="wrapper-input-search">
-                                            <input type="search" class="search-field"
-                                                placeholder="<?php esc_attr__('Cerca', 'cs2') ?>"
-                                                value="<?php echo get_search_query() ?>" name="s" />
-                                            <img class="input-search-icon"
-                                                data-src="<?php echo get_template_directory_uri() ?>/webpack/src/images/icon/search-black.svg"
-                                                src="<?php echo get_template_directory_uri() ?>/webpack/src/images/icon/search-black.svg"
-                                                alt="Search" width="17" height="17">
-                                        </div>
-                                    </form>
-
-                                </div>
                             </div>
                             <button type="button" class="navbar-toggler" data-toggle="collapse"
                                 data-target="#navbar-collapse">
