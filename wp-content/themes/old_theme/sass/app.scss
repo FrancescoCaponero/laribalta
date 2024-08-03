@@ -1,0 +1,41 @@
+// Import variables, mixins, and functions
+@import 'abstracts/_normalize.scss';
+@import 'abstracts/_variables.scss';
+@import 'abstracts/_mixins.scss';
+@import 'abstracts/_functions.scss';
+
+// Import base styles
+@import 'base/_typography.scss';
+
+// Import component styles
+@import 'components/_buttons.scss';
+@import 'components/_cover.scss';
+@import 'components/_links.scss';
+@import 'components/_logo.scss';
+@import 'components/_forms.scss';
+
+// Import layout styles
+@import 'layout/_header.scss';
+@import 'layout/_nav.scss';
+@import 'layout/_footer.scss';
+
+// Import page-specific styles
+@import 'pages/_home.scss';
+@import 'pages/_bio.scss';
+@import 'pages/_spettacoli.scss';
+@import 'pages/_compagnia.scss';
+@import 'pages/_collaborazioni.scss';
+@import 'pages/_formazione.scss';
+@import 'pages/_post-spettacoli.scss';
+@import 'pages/_post-compagnia.scss';
+@import 'pages/_post-collaborazioni.scss';
+@import 'pages/_contatti.scss';
+
+// Import utilities
+@import 'utilities/_helpers.scss';
+@import 'utilities/_animations.scss';
+@import 'utilities/_transitions.scss';
+
+// Import vendor styles
+@import 'vendors/_bootstrap.scss';
+@import 'vendors/_font-awesome.scss';

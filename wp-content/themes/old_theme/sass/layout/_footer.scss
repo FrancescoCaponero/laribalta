@@ -1,0 +1,85 @@
+.site-footer{
+    width: 100%;
+    .site-info{
+        width: 100%;
+        background-color: $black-color;
+        padding: 1.3rem 0;
+        
+        .inner-site-info{
+            margin: 4rem auto 6rem auto;
+            max-width: 1000px;
+            width: 90%;
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            @include breakpoint-lg{
+                flex-direction: column;
+            }
+
+            &__left{
+                display: flex;
+                flex-direction: column;
+                gap: 1rem;
+                &--mails{
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: flex-start;
+                    gap: 2.2rem;
+                    @include breakpoint-md{
+                        flex-direction: column;
+                    }
+                    .mail1, .mail2{
+                        display: flex;
+                        flex-direction: column;
+                    }
+                }
+                h4{
+                    color: $five-color;
+                    font-size: 30px;
+                    font-weight: 400;
+                }
+                a{
+                    color: $terdiary-color;
+                    font-weight: 300;
+                    font-size: 1.2rem;
+                    text-decoration: underline;
+                }
+            }   
+            &__right{
+                display: flex;
+                flex-direction: column;
+                h4{
+                    color: $five-color;
+                    font-size: 30px;
+                    font-weight: 400;
+                }
+                &--icons{
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    gap:1rem;
+                }
+            }
+        }
+    }
+    .color-claim-wrap{
+        width: 100%;
+        background-color: $terdiary-color;
+        padding: 1.3rem 0;
+        .copy-claim{
+            margin: 0 auto;
+            max-width: 1000px;
+            width: 90%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            @include breakpoint-lg{
+                flex-direction: column;
+                gap: 2rem;
+            }
+            &__logo{
+                width: 50px;
+            }
+        }
+    }
+}

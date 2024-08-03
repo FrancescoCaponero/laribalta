@@ -1,0 +1,56 @@
+.has-color-1-background-color{
+    background-color: $primary-color;
+}
+.has-color-2-background-color{
+    background-color: $secondary-color;
+}
+.has-color-3-background-color{
+    background-color: $terdiary-color;
+}
+.has-color-4-background-color{
+    background-color: $four-color;
+}
+.has-color-5-background-color{
+    background-color: $five-color;
+}
+.has-color-6-background-color{
+    background-color: $black-color;
+}
+.has-color-7-background-color{
+    background-color: $grey-color;
+}
+.has-color-8-background-color{
+    background-color: $white-color;
+}
+.has-color-1-color{
+   color: $primary-color;
+}
+.has-color-2-color{
+   color: $secondary-color;
+}
+.has-color-3-color{
+   color: $terdiary-color;
+}
+.has-color-4-color{
+   color: $four-color;
+}
+.has-color-5-color{
+   color: $five-color;
+}
+.has-color-6-color{
+   color: $black-color;
+}
+.has-color-7-color{
+   color: $grey-color;
+}
+.has-color-8-color{
+   color: $white-color;
+}
+
+:where(figure) {
+    margin: 0;
+}
+
+figure{
+    width: auto !important;
+}

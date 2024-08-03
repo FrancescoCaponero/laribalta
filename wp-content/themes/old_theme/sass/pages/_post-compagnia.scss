@@ -1,0 +1,19 @@
+.compagnia{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    max-width: 1000px;
+    width: 90%;
+    margin: 180px auto;
+    p{
+        font-size: 18px;
+        width: 100%;
+        &:first-child{
+            font-size: 3rem;
+            font-weight: 200;
+        }
+    }
+    img{
+        margin: 5rem auto;
+    }
+}

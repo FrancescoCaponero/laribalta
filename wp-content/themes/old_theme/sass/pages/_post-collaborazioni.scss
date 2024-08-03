@@ -1,0 +1,14 @@
+.collaborazioni{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    max-width: 1000px;
+    width: 90%;
+    margin: 180px auto;
+    p{
+        font-size: 18px;
+    }
+    img{
+        margin: 5rem auto;
+    }
+}

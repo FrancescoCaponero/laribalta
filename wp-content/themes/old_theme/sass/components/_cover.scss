@@ -1,0 +1,10 @@
+.wp-block-cover__inner-container,.wp-block-cover__background{
+    z-index: -99 !important;
+}
+.wp-block-cover{
+    transform: translateY(-200px);
+}
+.wp-block-cover__inner-container{
+    max-width: 1000px;
+    width: 90%;
+}

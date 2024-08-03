@@ -1,0 +1,24 @@
+.home{
+    .main-bg{
+        height: 60vh  !important;
+        img{
+            object-fit: cover  !important;
+            height: 100%  !important;
+        }
+    }
+    .site-main{
+        h2,p{
+            width: 90%;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+    }
+    .divider{
+        overflow: hidden;
+        max-height: 500px;
+        img{
+            object-fit: cover;
+            width: 100%;
+        }
+    }
+}

@@ -1,0 +1,18 @@
+.page-slug-formazione{
+    .site-main{
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        max-width: 1000px;
+        width: 90%;
+        margin: 180px auto;
+        gap: .5rem;
+        img{
+            width: 100% !important;
+        }
+        p{
+            font-size: 20px;
+        }
+
+    }
+}

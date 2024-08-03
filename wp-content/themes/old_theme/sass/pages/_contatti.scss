@@ -1,0 +1,64 @@
+.page-slug-contatti{
+    .contact-wrapper{
+        margin: 0 !important;
+        height: calc(100vh - 160px);
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        @include breakpoint-lg{
+           padding: 0rem .6rem;
+        }
+        .wp-block-group-is-layout-flex{
+            @include breakpoint-lg{
+                flex-direction: column !important;
+            }
+
+        }
+        p{
+            a{
+                color: $terdiary-color;
+                text-decoration: underline;
+            }
+        }
+        .left-contact{
+            max-width: 500px;
+        }
+        .right-contact{
+            align-self: flex-start;
+        }
+        .inner-nav--icons{
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-end;
+            gap: 3rem;
+            align-content: center;
+            flex-wrap: nowrap;
+            flex-direction: row;
+        }
+    }
+    .color-claimcontact-wrap{
+        margin: 0 auto;
+        width: 100%;
+        background-color: $terdiary-color;
+        padding: 1.3rem 0;
+        .copy-claim{
+            margin: 0 auto;
+            max-width: 1000px;
+            width: 90%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            @include breakpoint-lg{
+                flex-direction: column;
+                gap: 2rem;
+            }
+            &__logo{
+                width: 50px;
+            }
+        }
+    }
+    #colophon{
+        display: none;
+    }
+}

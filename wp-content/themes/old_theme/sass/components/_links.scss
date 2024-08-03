@@ -1,0 +1,27 @@
+.main-navigation{
+    a {
+        position: relative;
+    
+        &:not(:has(img)) {
+            &:hover {
+                &::after {
+                    content: '';
+                    background-color: $secondary-color;
+                    width: 80%;
+                    height: 1px;
+                }
+            }
+    
+            &::after {
+                content: '';
+                transition: all .2s ease-in-out;
+                background-color: $secondary-color;
+                position: absolute;
+                left: 0;
+                bottom: 10px;
+                width: 0%;
+                height: 1px;
+            }
+        }
+    }
+}
