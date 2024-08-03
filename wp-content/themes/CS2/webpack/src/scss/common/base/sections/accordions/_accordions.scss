@@ -1,0 +1,25 @@
+.section__accordions__wrapper {
+    @include s-y-5xl(padding);
+    @include row;
+
+    .column-text-wrap,
+    .column-accordions-wrap {
+        @include col-12;
+        &__text {
+            .field--name-field-p-accordions-text {
+                @include s-bottom-lg(margin);
+            }
+        }
+
+        &__accordions {
+            .field--name-field-p-accordions-accordion {
+                @include row;
+
+                >.field__item {
+                    @include col-12;
+                    @include s-bottom-xs(margin);
+                }
+            }
+        }
+    }
+}

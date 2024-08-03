@@ -1,0 +1,45 @@
+.section__cards__wrapper {
+    @include s-y-5xl(padding);
+    @include row;
+
+    .column-text-wrap,
+    .column-cards-wrap {
+        @include col-12;
+
+        &__text {
+            .field--name-field-p-cards-text {
+                @include s-bottom-lg(margin);
+
+                h2,
+                h3,
+                h4,
+                h5,
+                h6,
+                p {
+                    text-align: center;
+                }
+            }
+        }
+
+        &__cards {
+            .field--name-field-p-cards-card {
+                @include row;
+                flex-wrap: nowrap;
+                justify-content: center;
+                @include gap(12);
+                >.field__item {
+                    @include col-4;
+                    @include s-bottom-lg(margin);
+
+                    @include media-breakpoint-down(lg) {
+                        @include col-6;
+                    }
+
+                    @include media-breakpoint-down(sm) {
+                        @include col-12;
+                    }
+                }
+            }
+        }
+    }
+}

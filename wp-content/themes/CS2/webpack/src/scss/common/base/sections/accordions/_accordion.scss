@@ -1,0 +1,38 @@
+.accordion__wrapper {
+
+    .accordion__wrapper__content {
+        border-top: 4px solid $neutral2;
+    }
+
+    &__title {
+        @include s-x-sm(padding);
+        @include s-y-lg(padding);
+        @include flex(row, flex-start, center);
+        cursor: pointer;
+
+        .field--name-field-p-accordion-title {
+            @include p-xl;
+            @include s-left-sm(margin);
+        }
+
+        .accordion__icon {
+            transition: all 0.5s;
+            transform: rotate(0deg);
+
+            &.open {
+                transform: rotate(45deg);
+            }
+        }
+    }
+
+    &__text {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.5s ease-in-out;
+
+        .field--name-field-p-accordion-text {
+            @include s-x-3xl(padding);
+            @include s-y-sm(padding);
+        }
+    }
+}

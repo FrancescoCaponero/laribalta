@@ -1,0 +1,31 @@
+.page-4xx{
+    @include s-y-5xl(padding);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 450px;
+    .error-code {
+        @include h1;
+    }
+
+    h2{
+        @include h2;
+        font-size: 50px !important;
+        line-height: 60px !important;
+    }
+    a{
+        @include btn;
+    }
+
+}
+
+.page-4xx{
+    @include media-breakpoint-down(lg){
+        @include s-bottom-xl(margin);
+    }
+}
+
+
+
+

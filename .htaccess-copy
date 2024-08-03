@@ -1,0 +1,115 @@
+########## PREVENT URL REWRITES FOR LET'S ENCRYPT ###########
+RewriteEngine On
+RewriteRule ^\.well-known\/acme-challenge\/ - [L]
+
+########## SECURITY SETTINGS: START ##########
+ServerSignature Off
+
+<IfModule mod_headers.c>
+Header set Strict-Transport-Security "max-age=31536000" env=HTTPS
+Header set X-XSS-Protection "1; mode=block"
+Header set X-Content-Type-Options nosniff
+Header set X-Frame-Options "SAMEORIGIN"
+Header set Referrer-Policy: no-referrer-when-downgrade
+Header unset X-Powered-By
+Header edit Set-Cookie ^(.*)$ "$1; httpOnly; secure"
+</IfModule>
+
+########## SECURITY SETTINGS: END ##########
+
+
+# BEGIN iThemes Security - Do not modify or remove this line
+# iThemes Security Config Details: 2
+	# Protect System Files - Security > Settings > System Tweaks > System Files
+	<files .htaccess>
+		<IfModule mod_authz_core.c>
+			Require all denied
+		</IfModule>
+		<IfModule !mod_authz_core.c>
+			Order allow,deny
+			Deny from all
+		</IfModule>
+	</files>
+	<files readme.html>
+		<IfModule mod_authz_core.c>
+			Require all denied
+		</IfModule>
+		<IfModule !mod_authz_core.c>
+			Order allow,deny
+			Deny from all
+		</IfModule>
+	</files>
+	<files readme.txt>
+		<IfModule mod_authz_core.c>
+			Require all denied
+		</IfModule>
+		<IfModule !mod_authz_core.c>
+			Order allow,deny
+			Deny from all
+		</IfModule>
+	</files>
+	<files wp-config.php>
+		<IfModule mod_authz_core.c>
+			Require all denied
+		</IfModule>
+		<IfModule !mod_authz_core.c>
+			Order allow,deny
+			Deny from all
+		</IfModule>
+	</files>
+
+	# Disable Directory Browsing - Security > Settings > System Tweaks > Directory Browsing
+	Options -Indexes
+
+	<IfModule mod_rewrite.c>
+		RewriteEngine On
+
+		# Protect System Files - Security > Settings > System Tweaks > System Files
+		RewriteRule ^wp-admin/install\.php$ - [F]
+		RewriteRule ^wp-admin/includes/ - [F]
+		RewriteRule !^wp-includes/ - [S=3]
+		RewriteRule ^wp-includes/[^/]+\.php$ - [F]
+		RewriteRule ^wp-includes/js/tinymce/langs/.+\.php - [F]
+		RewriteRule ^wp-includes/theme-compat/ - [F]
+		RewriteCond %{REQUEST_FILENAME} -f
+		RewriteRule (^|.*/)\.(git|svn)/.* - [F]
+
+		# Disable PHP in Uploads - Security > Settings > System Tweaks > PHP in Uploads
+		RewriteRule ^wp\-content/uploads/.*\.(?:php[1-7]?|pht|phtml?|phps)\.?$ - [NC,F]
+
+		# Disable PHP in Plugins - Security > Settings > System Tweaks > PHP in Plugins
+		RewriteRule ^wp\-content/plugins/.*\.(?:php[1-7]?|pht|phtml?|phps)\.?$ - [NC,F]
+
+		# Disable PHP in Themes - Security > Settings > System Tweaks > PHP in Themes
+		RewriteRule ^wp\-content/themes/.*\.(?:php[1-7]?|pht|phtml?|phps)\.?$ - [NC,F]
+	</IfModule>
+# END iThemes Security - Do not modify or remove this line
+
+# chiedere user e pass all'accesso (in fase di demo)
+#AuthName "Dialog prompt"
+#AuthType Basic
+#AuthUserFile /www/MW_qIcGGRqna/nomesito.it/.htpasswd
+#Require valid-user
+
+#redirect to www with https
+#RewriteEngine On
+#RewriteCond %{HTTPS} off
+#RewriteRule .* https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+#RewriteCond %{HTTP_HOST} !^www\. [NC]
+#RewriteRule .* https://www.%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# BEGIN WordPress
+# Le direttive (linee) tra `BEGIN WordPress` e `END WordPress` sono
+# generate dinamicamente, e dovrebbero essere modificate solo tramite i filtri di WordPress.
+# Ogni modifica alle direttive tra questi marcatori verr� sovrascritta.
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+RewriteBase /
+RewriteRule ^index\.php$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /index.php [L]
+</IfModule>
+
+# END WordPress

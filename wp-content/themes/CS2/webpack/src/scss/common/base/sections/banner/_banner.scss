@@ -1,0 +1,57 @@
+.section__banner__wrapper {
+    @include s-y-5xl(padding);
+
+    .banner__wrapper {
+        @include row;
+        @include s-y-6xl(padding);
+        justify-content: center;
+
+        &.bg__active {
+            background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), var(--bg-image);
+            @include bg-image-standard;
+
+            @include media-breakpoint-down (sm) {
+                background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), var(--bg-image-mobile);
+            }
+
+            .field--name-field-p-banner-title,
+            .field--name-field-p-banner-text {
+                color: $white;
+            }
+        }
+
+        .column-text-wrap {
+            @include col-12;
+
+            @include media-breakpoint-up(lg) {
+                max-width: 900px;
+            }
+
+            /*
+            &__title {
+                .field--name-field-p-banner-title {
+                    @include h3;
+                    @include s-bottom-12(margin);
+                    text-align: center;
+                }
+            }*/
+
+            &__text {
+                .field--name-field-p-banner-text {
+                    text-align: center;
+                }
+            }
+
+            &__cta {
+                .field--name-field-p-banner-cta {
+                    @include flex(row, center, flex-start);
+                    @include s-top-xl(margin);
+
+                    a {
+                        @include btn-secondary;
+                    }
+                }
+            }
+        }
+    }
+}

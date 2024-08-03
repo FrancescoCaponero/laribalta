@@ -1,0 +1,8 @@
+.section__text__wrapper {
+    @include s-y-5xl(padding);
+    @include row;
+
+    .column-text-wrap {
+        @include col-12;
+    }
+}

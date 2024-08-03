@@ -1,0 +1,73 @@
+// ridimensionamento del box-sizing più intuitivo.
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+// rimozione del margine di default
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+// scrollbar
+html {
+  overflow-y: scroll !important;
+}
+
+body {
+  overflow-x: hidden !important;
+}
+
+// scroll
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+// modifiche tipografiche
+body {
+  line-height: 1.5;
+  text-rendering: optimizeSpeed;
+  -webkit-font-smoothing: antialiased;
+}
+
+// miglioramento impostazioni predefinite dei media
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+// rimozione degli stili di default dei form
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+// ripristina la proprietà 'white-space' per gli elementi textarea su Safari
+textarea {
+  white-space: revert;
+}
+
+// rimozione della spaziatura tra le celle nelle tabelle
+table {
+  border-collapse: collapse;
+}
+
+// evitare overflow del testo
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}

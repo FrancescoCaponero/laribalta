@@ -1,0 +1,378 @@
+/* SPACINGS */
+
+// Mixin per spaziature -- custom
+@mixin spacing($property, $position, $size) {
+    @if $property == margin or $property == padding {
+        @if $position == y {
+            #{$property}-top: $size;
+            #{$property}-bottom: $size;
+        } @else if $position == x {
+            #{$property}-left: $size;
+            #{$property}-right: $size;
+        } @else {
+            #{$property}-#{$position}: $size;
+        }
+    }
+}
+// Esempio di utilizzo
+//  .box {
+//     @include spacing(margin, y, 20px);
+//     @include spacing(padding, left, 10px);
+//  } 
+// Spaziatura per tutti i lati
+
+@mixin s-all-2xs($property) {
+    #{$property}: $xs2 $xs2 $xs2 $xs2;
+}
+@mixin s-all-xs($property) {
+    #{$property}: $xs $xs $xs $xs;
+}
+@mixin s-all-sm($property) {
+    #{$property}: $sm $sm $sm $sm;
+}
+@mixin s-all-md($property) {
+    #{$property}: $md $md $md $md;
+}
+@mixin s-all-lg($property) {
+    #{$property}: $lg $lg $lg $lg;
+}
+@mixin s-all-xl($property) {
+    #{$property}: $xl $xl $xl $xl;
+}
+@mixin s-all-2xl($property) {
+    #{$property}: $xl2 $xl2 $xl2 $xl2;
+}
+@mixin s-all-3xl($property) {
+    #{$property}: $xl3 $xl3 $xl3 $xl3;
+}
+@mixin s-all-4xl($property) {
+    #{$property}: $xl4 $xl4 $xl4 $xl4;
+}
+@mixin s-all-5xl($property) {
+    #{$property}: $xl5 $xl5 $xl5 $xl5;
+}
+@mixin s-all-6xl($property) {
+    #{$property}: $xl6 $xl6 $xl6 $xl6;
+}
+@mixin s-all-7xl($property) {
+    #{$property}: $xl7 $xl7 $xl7 $xl7;
+}
+@mixin s-all-8xl($property) {
+    #{$property}: $xl8 $xl8 $xl8 $xl8;
+}
+@mixin s-all-9xl($property) {
+    #{$property}: $xl9 $xl9 $xl9 $xl9;
+}
+@mixin s-all-10xl($property) {
+    #{$property}: $xl10 $xl10 $xl10 $xl10;
+}
+
+// Spaziatura orizzontale
+@mixin s-x-2xs($property) {
+    #{$property}-left: $xs2;
+    #{$property}-right: $xs2;
+}
+@mixin s-x-xs($property) {
+    #{$property}-left: $xs;
+    #{$property}-right: $xs;
+}
+@mixin s-x-sm($property) {
+    #{$property}-left: $sm;
+    #{$property}-right: $sm;
+}
+@mixin s-x-md($property) {
+    #{$property}-left: $md;
+    #{$property}-right: $md;
+}
+@mixin s-x-lg($property) {
+    #{$property}-left: $lg;
+    #{$property}-right: $lg;
+}
+@mixin s-x-xl($property) {
+    #{$property}-left: $xl;
+    #{$property}-right: $xl;
+}
+@mixin s-x-2xl($property) {
+    #{$property}-left: $xl2;
+    #{$property}-right: $xl2;
+}
+@mixin s-x-3xl($property) {
+    #{$property}-left: $xl3;
+    #{$property}-right: $xl3;
+}
+@mixin s-x-4xl($property) {
+    #{$property}-left: $xl4;
+    #{$property}-right: $xl4;
+}
+@mixin s-x-5xl($property) {
+    #{$property}-left: $xl5;
+    #{$property}-right: $xl5;
+}
+@mixin s-x-6xl($property) {
+    #{$property}-left: $xl6;
+    #{$property}-right: $xl6;
+}
+@mixin s-x-7xl($property) {
+    #{$property}-left: $xl7;
+    #{$property}-right: $xl7;
+}
+@mixin s-x-8xl($property) {
+    #{$property}-left: $xl8;
+    #{$property}-right: $xl8;
+}
+@mixin s-x-9xl($property) {
+    #{$property}-left: $xl9;
+    #{$property}-right: $xl9;
+}
+@mixin s-x-10xl($property) {
+    #{$property}-left: $xl10;
+    #{$property}-right: $xl10;
+}
+
+// Spaziatura verticale
+@mixin s-y-2xs($property) {
+    #{$property}-top: $xs2;
+    #{$property}-bottom: $xs2;
+}
+@mixin s-y-xs($property) {
+    #{$property}-top: $xs;
+    #{$property}-bottom: $xs;
+}
+@mixin s-y-sm($property) {
+    #{$property}-top: $sm;
+    #{$property}-bottom: $sm;
+}
+@mixin s-y-md($property) {
+    #{$property}-top: $md;
+    #{$property}-bottom: $md;
+}
+@mixin s-y-lg($property) {
+    #{$property}-top: $lg;
+    #{$property}-bottom: $lg;
+}
+@mixin s-y-xl($property) {
+    #{$property}-top: $xl;
+    #{$property}-bottom: $xl;
+}
+@mixin s-y-2xl($property) {
+    #{$property}-top: $xl2;
+    #{$property}-bottom: $xl2;
+}
+@mixin s-y-3xl($property) {
+    #{$property}-top: $xl3;
+    #{$property}-bottom: $xl3;
+}
+@mixin s-y-4xl($property) {
+    #{$property}-top: $xl4;
+    #{$property}-bottom: $xl4;
+}
+@mixin s-y-5xl($property) {
+    #{$property}-top: $xl5;
+    #{$property}-bottom: $xl5;
+}
+@mixin s-y-6xl($property) {
+    #{$property}-top: $xl6;
+    #{$property}-bottom: $xl6;
+}
+@mixin s-y-7xl($property) {
+    #{$property}-top: $xl7;
+    #{$property}-bottom: $xl7;
+}
+@mixin s-y-8xl($property) {
+    #{$property}-top: $xl8;
+    #{$property}-bottom: $xl8;
+}
+@mixin s-y-9xl($property) {
+    #{$property}-top: $xl9;
+    #{$property}-bottom: $xl9;
+}
+@mixin s-y-10xl($property) {
+    #{$property}-top: $xl10;
+    #{$property}-bottom: $xl10;
+}
+// Spaziatura a sinistra
+@mixin s-left-2xs($property) {
+    #{$property}-left: $xs2;
+}
+@mixin s-left-xs($property) {
+    #{$property}-left: $xs;
+}
+@mixin s-left-sm($property) {
+    #{$property}-left: $sm;
+}
+@mixin s-left-md($property) {
+    #{$property}-left: $md;
+}
+@mixin s-left-lg($property) {
+    #{$property}-left: $lg;
+}
+@mixin s-left-xl($property) {
+    #{$property}-left: $xl;
+}
+@mixin s-left-2xl($property) {
+    #{$property}-left: $xl2;
+}
+@mixin s-left-3xl($property) {
+    #{$property}-left: $xl3;
+}
+@mixin s-left-4xl($property) {
+    #{$property}-left: $xl4;
+}
+@mixin s-left-5xl($property) {
+    #{$property}-left: $xl5;
+}
+@mixin s-left-6xl($property) {
+    #{$property}-left: $xl6;
+}
+@mixin s-left-7xl($property) {
+    #{$property}-left: $xl7;
+}
+@mixin s-left-8xl($property) {
+    #{$property}-left: $xl8;
+}
+@mixin s-left-9xl($property) {
+    #{$property}-left: $xl9;
+}
+@mixin s-left-10xl($property) {
+    #{$property}-left: $xl10;
+}
+
+// Spaziatura a destra
+@mixin s-right-2xs($property) {
+    #{$property}-right: $xs2;
+}
+@mixin s-right-xs($property) {
+    #{$property}-right: $xs;
+}
+@mixin s-right-sm($property) {
+    #{$property}-right: $sm;
+}
+@mixin s-right-md($property) {
+    #{$property}-right: $md;
+}
+@mixin s-right-lg($property) {
+    #{$property}-right: $lg;
+}
+@mixin s-right-xl($property) {
+    #{$property}-right: $xl;
+}
+@mixin s-right-2xl($property) {
+    #{$property}-right: $xl2;
+}
+@mixin s-right-3xl($property) {
+    #{$property}-right: $xl3;
+}
+@mixin s-right-4xl($property) {
+    #{$property}-right: $xl4;
+}
+@mixin s-right-5xl($property) {
+    #{$property}-right: $xl5;
+}
+@mixin s-right-6xl($property) {
+    #{$property}-right: $xl6;
+}
+@mixin s-right-7xl($property) {
+    #{$property}-right: $xl7;
+}
+@mixin s-right-8xl($property) {
+    #{$property}-right: $xl8;
+}
+@mixin s-right-9xl($property) {
+    #{$property}-right: $xl9;
+}
+@mixin s-right-10xl($property) {
+    #{$property}-right: $xl10;
+}
+// Spaziatura superiore
+@mixin s-top-2xs($property) {
+    #{$property}-top: $xs2;
+}
+@mixin s-top-xs($property) {
+    #{$property}-top: $xs;
+}
+@mixin s-top-sm($property) {
+    #{$property}-top: $sm;
+}
+@mixin s-top-md($property) {
+    #{$property}-top: $md;
+}
+@mixin s-top-lg($property) {
+    #{$property}-top: $lg;
+}
+@mixin s-top-xl($property) {
+    #{$property}-top: $xl;
+}
+@mixin s-top-2xl($property) {
+    #{$property}-top: $xl2;
+}
+@mixin s-top-3xl($property) {
+    #{$property}-top: $xl3;
+}
+@mixin s-top-4xl($property) {
+    #{$property}-top: $xl4;
+}
+@mixin s-top-5xl($property) {
+    #{$property}-top: $xl5;
+}
+@mixin s-top-6xl($property) {
+    #{$property}-top: $xl6;
+}
+@mixin s-top-7xl($property) {
+    #{$property}-top: $xl7;
+}
+@mixin s-top-8xl($property) {
+    #{$property}-top: $xl8;
+}
+@mixin s-top-9xl($property) {
+    #{$property}-top: $xl9;
+}
+@mixin s-top-10xl($property) {
+    #{$property}-top: $xl10;
+}
+
+// Spaziatura inferiore
+@mixin s-bottom-2xs($property) {
+    #{$property}-bottom: $xs2;
+}
+@mixin s-bottom-xs($property) {
+    #{$property}-bottom: $xs;
+}
+@mixin s-bottom-sm($property) {
+    #{$property}-bottom: $sm;
+}
+@mixin s-bottom-md($property) {
+    #{$property}-bottom: $md;
+}
+@mixin s-bottom-lg($property) {
+    #{$property}-bottom: $lg;
+}
+@mixin s-bottom-xl($property) {
+    #{$property}-bottom: $xl;
+}
+@mixin s-bottom-2xl($property) {
+    #{$property}-bottom: $xl2;
+}
+@mixin s-bottom-3xl($property) {
+    #{$property}-bottom: $xl3;
+}
+@mixin s-bottom-4xl($property) {
+    #{$property}-bottom: $xl4;
+}
+@mixin s-bottom-5xl($property) {
+    #{$property}-bottom: $xl5;
+}
+@mixin s-bottom-6xl($property) {
+    #{$property}-bottom: $xl6;
+}
+@mixin s-bottom-7xl($property) {
+    #{$property}-bottom: $xl7;
+}
+@mixin s-bottom-8xl($property) {
+    #{$property}-bottom: $xl8;
+}
+@mixin s-bottom-9xl($property) {
+    #{$property}-bottom: $xl9;
+}
+@mixin s-bottom-10xl($property) {
+    #{$property}-bottom: $xl10;
+}

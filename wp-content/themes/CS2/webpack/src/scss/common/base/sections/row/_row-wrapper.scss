@@ -1,0 +1,59 @@
+.section__row__wrapper {
+  // FULL WIDTH
+  // qua dichiarare le distanze tra rows
+  //@include s-y-6xl(padding); 
+  
+  &__layout {
+    position: relative;
+    // BG VIDEO
+    &__video {
+      @include bg-fullscreen;
+      object-fit: cover;
+      &__overlay {
+        @include bg-fullscreen;
+        background: linear-gradient(0deg, rgba(0, 50, 104, 0.3019607843) 0%, rgba(0, 50, 104, 0.3019607843) 100%), rgba(0, 0, 0, 0.3764705882);
+      }
+    }
+    &__video__mobile {
+      @include media-breakpoint-up(lg) {
+        display: none;
+      }
+    }
+    &__video__desktop {
+      @include media-breakpoint-down(lg) {
+        display: none;
+      }
+    }
+    // BG COLOR or IMAGE
+    &__bg {
+      @include bg-fullscreen;
+      background-color: var(--bg-color);
+      background-image: var(--bg-image);
+      background-position-x: var(--bg-image-x);
+      background-position-y: var(--bg-image-y);
+      background-size: var(--bg-image-size);
+    }
+    // CONTENT
+    &__content {
+      &__txt-color {
+        color: var(--txt-color);
+        h2, h3, h4, h5, h6, p, span, a {
+          color: var(--txt-color);
+        }
+      }
+    }
+  }
+  // CONTAINER WIDTH
+  &.containerwidth {
+    // BG VIDEO
+    .section__row__wrapper__layout__video {
+      width: 100%;
+      left: 0;
+    }
+    // BG COLOR or IMAGE
+    .section__row__wrapper__layout__bg {
+      width: 100%;
+      left: 0;
+    }
+  }
+}

@@ -1,0 +1,98 @@
+body {
+  background-color: $white;
+
+  &.header_is_sticky {
+    padding-top: $headerHeightDesktop;
+    @include media-breakpoint-down(lg) {
+      padding-top: $headerHeightMobile;
+    }
+  }
+}
+
+main {
+  @include s-bottom-lg(padding);
+}
+
+.bg-fullscreen-white {
+  @include bg-fullscreen-white;
+}
+
+.bg-fullscreen-black {
+  @include bg-fullscreen-black;
+}
+
+.bg-fullscreen-neutral {
+  @include bg-fullscreen-neutral;
+}
+
+.bg-fullscreen-accent {
+  @include bg-fullscreen-accent;
+}
+
+.bg-fullscreen-primary {
+  @include bg-fullscreen-primary;
+}
+
+.bg-fullscreen-secondary {
+  @include bg-fullscreen-secondary;
+}
+
+// scrollbar
+@include media-breakpoint-up(lg) {
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  border-radius: 0px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: $accent2;
+  border-radius: 0px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: $neutral2;
+}
+}
+
+// selection 
+::-moz-selection {
+  background: $secondary3;
+  color: $white;
+}
+
+::selection {
+  background: $secondary3;
+  color: $white;
+}
+
+
+// page 404
+.node-404 {
+  .section__404__wrapper {
+    @include flex(column, center, center);
+    min-height: 50vh;
+
+    a {
+      @include btn;
+    }
+  }
+}
+
+// page privacy
+.node-privacy {
+  .section__privacy__wrapper {
+    min-height: 50vh;
+
+    h2 {
+      @include h1;
+    }
+  }
+}
+
+nav.pagination{
+  @include s-y-sm(padding);
+  text-align: center;
+}

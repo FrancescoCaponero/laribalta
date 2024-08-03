@@ -1,0 +1,23 @@
+# WordPress file e cartelle
+/wp-config.php
+/wp-content/uploads/
+/.vscode/
+
+# Strumenti
+/node_modules/
+/.netbeans.xml
+/.idea/
+
+# WPOptimize
+/wp-content/advanced-cache.php
+/wp-content/cache/
+/wp-content/wpo-cache/
+/.htaccess
+
+#ddev
+/.ddev/
+/wp-config-ddev.php
+
+# Exclude Zone.Identifier files added by WSL
+*/Zone.Identifier
+*/*Zone.Identifier

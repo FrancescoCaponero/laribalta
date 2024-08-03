@@ -1,0 +1,87 @@
+/* GRIDS */
+
+/*-- CONTAINER --*/ 
+
+// Lunghezze massime del container
+$container-max-widths: (
+  desk: calc(1296px + $gutter-width),
+);
+
+@mixin container-standard {
+  width: 100%;
+  padding-right: calc(#{$gutter-width} * 0.5);
+  padding-left: calc(#{$gutter-width} * 0.5);
+  margin-left: auto;
+  margin-right: auto;
+
+  @include media-breakpoint-up(desk) { 
+    max-width: map-get($container-max-widths, desk); 
+  }
+
+
+}
+
+/*-- ROWS --*/
+
+@mixin row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: calc(#{$gutter-width} * -0.5);
+  margin-left: calc(#{$gutter-width} * -0.5);
+
+  /*-- COLS IN ROWS --*/
+
+  > [class^="col-"],
+  > [class*=" col-"],
+  & > div 
+  {
+    flex-shrink: 0;
+    max-width: 100%;
+
+    padding-right: calc(#{$gutter-width} * 0.5); // 8px
+    padding-left: calc(#{$gutter-width} * 0.5); // 8px
+
+  }
+}
+
+/* COLUMNS */
+
+// Column definitions without gap
+@mixin col-12 {@include make-col(12);}
+@mixin col-11 {@include make-col(11);}
+@mixin col-10 {@include make-col(10);}
+@mixin col-9  {@include make-col(9);}
+@mixin col-8  {@include make-col(8);}
+@mixin col-7  {@include make-col(7);}
+@mixin col-6  {@include make-col(6);}
+@mixin col-5  {@include make-col(5);}
+@mixin col-4  {@include make-col(4);}
+@mixin col-3  {@include make-col(3);}
+@mixin col-2  {@include make-col(2);}
+@mixin col-1  {@include make-col(1);}
+
+@mixin make-col($num, $total-columns: 12) {
+  width: calc((100% / $total-columns * $num));
+  max-width: calc((100% / $total-columns * $num));
+  flex: 0 0 calc((100% / $total-columns * $num));
+}
+
+// Generazione delle classi di colonne per ogni breakpoint
+@each $breakpoint, $breakpoint-width in $breakpoints {
+  @include media-breakpoint-up($breakpoint) {
+    @for $i from 1 through 12 {
+      .col-#{$breakpoint}-#{$i} {
+        @include make-col($i);
+      }
+    }
+  }
+}
+
+/* COLUMNS-OFFSET */
+@mixin col-offset-left($num, $total-columns: 12) {
+  margin-left: calc((100% / $total-columns) * $num);
+}
+
+@mixin col-offset-right($num, $total-columns: 12) {
+  margin-right: calc((100% / $total-columns) * $num);
+}

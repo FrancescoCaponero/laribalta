@@ -1,0 +1,23 @@
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    max-width: 600px;
+    input:not([type="checkbox"]):not([type="submit"]){
+        width: 100%;
+    }
+    textarea{
+        display: block;
+        resize: none;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        width: 100%;
+        margin: 0;
+    }
+    label{
+        @include p-m;
+    }
+    input{
+        @include p-m;
+    }
+}

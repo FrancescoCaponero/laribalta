@@ -1,0 +1,6 @@
+.section__media__wrapper {
+    @include s-y-5xl(padding);
+    @include row;
+    align-items: center;
+    justify-content: center;
+}

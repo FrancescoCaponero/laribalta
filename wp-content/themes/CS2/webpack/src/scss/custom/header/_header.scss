@@ -1,0 +1,312 @@
+header {
+    z-index: 10;
+
+    &.header--sticky {
+        position: fixed;
+        width: 100%;
+        top: 0;
+    }
+    &:not(.header--sticky) {
+        position: relative;
+    }
+
+    input.form-submit[value="Cerca"] {
+        display: none;
+    }
+
+    .wrapper-navbar-header {
+        @include s-y-lg(padding);
+
+        @include media-breakpoint-down(lg) {
+            @include flex(row, space-between, center);
+        }
+
+        // hamburger menu
+        .navbar-toggler {
+            @include media-breakpoint-up(lg) {
+                display: none;
+            }
+
+            background-color: transparent;
+            display: inline-block;
+            outline: none;
+            border: 0;
+            padding: 0px;
+
+            &:focus {
+                outline: none;
+                box-shadow: none;
+            }
+
+            &.is-toggled {
+                .icon-bar {
+                    &:nth-child(2) {
+                        top: 7px;
+                        transform: rotate(45deg);
+                    }
+
+                    &:nth-child(3) {
+                        opacity: 0;
+                    }
+
+                    &:nth-child(4) {
+                        top: -7px;
+                        transform: rotate(-45deg);
+                    }
+                }
+            }
+
+            .sr-only {
+                display: none;
+            }
+
+            .icon-bar {
+                position: relative;
+                display: block;
+                width: 25px;
+                height: 3px;
+                background-color: $black;
+                transition: 0.4s all ease;
+
+                + .icon-bar {
+                    margin-top: 4px;
+                }
+            }
+        }
+
+        .region-header {
+            @include flex(row, space-between, center);
+
+            // logo
+            .block-system-branding-block {
+                svg,
+                img {
+                    height: auto;
+                    width: 100%;
+                    max-width: 220px;
+                    height: 80px;
+                }
+                .custom-logo{
+                    @include media-breakpoint-down(lg) {
+                        display: none;
+                    }
+                }
+                .mobile_logo {
+                    display: none;
+                    @include media-breakpoint-down(lg) {
+                        display: block;
+                    }
+                }
+            }
+
+            // navigazione principale
+            nav {
+                @include media-breakpoint-down(lg) {
+                    display: none;
+                }
+            }
+
+            // cerca
+            .search-block-form {
+                @include media-breakpoint-down(lg) {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+// navigazione principale
+header,
+.wrapper-menu-mobile {
+    nav {
+        ul {
+            li {
+                a,
+                span {
+                    @include s-y-sm(padding);
+                    @include s-x-md(padding);
+                    @include menu-1;
+                    cursor: pointer;
+                    display: table-cell;
+
+                    @include media-breakpoint-down(lg) {
+                        display: inline-block;
+                        text-align: center;
+                    }
+
+                    &::after {
+                        display: block;
+                        content: "";
+                        width: 100%;
+                        height: 1px;
+                        background-color: transparent;
+                    }
+
+                    &.is-active {
+                        &::after {
+                            transition: all 0.4s ease;
+                            background-color: $black;
+                        }
+                    }
+                }
+
+                &.dropdown {
+                    position: relative;
+
+                    .item-parent-menu {
+                        width: 100%;
+
+                        &::after {
+                            display: inline-block;
+                            position: relative;
+                            content: url("../src/images/icon/dropdown-black.svg");
+                            width: 12px;
+                            height: auto;
+                            left: 12px;
+                            top: -2px;
+                            transition: all 0.4s;
+                            transform: scaleY(1);
+                        }
+
+                        &.submenu-active {
+                            &::after {
+                                transform: scaleY(-1);
+                                top: 2px;
+                            }
+                        }
+                    }
+
+                    ul.sub-menu {
+                        @include flex(column, flex-start, flex-start);
+                        min-width: 100%;
+                        background-color: $neutral1;
+                        position: absolute;
+                        top: 44px;
+                        left: 0;
+                        @include s-y-2xs(padding);
+                        transition: all 0.3s ease;
+                        opacity: 0;
+                        z-index: -10;
+                        pointer-events: none;
+
+                        &.submenu-active {
+                            opacity: 1;
+                            z-index: 10;
+                            pointer-events: all;
+                        }
+
+                        li {
+                            transition: all 0.4s ease;
+                            width: 100%;
+
+                            &:hover {
+                                background-color: $neutral2;
+                                color: $white;
+
+                                a,
+                                span {
+                                    &.is-active {
+                                        &::after {
+                                            background-color: $white;
+                                        }
+                                    }
+                                }
+                            }
+
+                            a,
+                            span {
+                                @include menu-2;
+                                display: inline-block;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// navigazione principale mobile
+.wrapper-menu-mobile {
+    @include media-breakpoint-up(lg) {
+        display: none !important;
+    }
+
+    // padding-top: 24vh;
+    // height: 100%;
+    // min-height: 100vh;
+    @include s-y-9xl(padding);
+    background-color: $white;
+    width: 100%;
+    position: absolute;
+    top: -200vh;
+    left: 0;
+    z-index: 9;
+    overflow-x: hidden;
+    transition: all 0.4s ease;
+
+    &.show {
+        top: 0;
+    }
+
+    &.header--sticky {
+        position: fixed;
+    }
+
+    nav {
+        background-color: $white;
+
+        ul {
+            @include flex(column, flex-start, center);
+
+            li {
+                @include s-bottom-lg(margin);
+
+                &.dropdown {
+                    ul.sub-menu {
+                        position: relative;
+                        top: 0;
+                        opacity: 1;
+                        z-index: unset;
+                        display: none;
+                        background-color: transparent;
+
+                        li {
+                            @include s-bottom-xs(margin);
+                        }
+
+                        &.submenu-active {
+                            opacity: 1;
+                            z-index: unset;
+                            @include flex();
+                            @include flex(column, center, center);
+                            text-align: center;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.breadcrumb-container {
+    margin-bottom: 20px;
+
+    ol {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+
+        li {
+            &:not(:first-of-type) {
+                margin-left: 10px;
+                padding-left: 10px;
+                list-style-type: "/";
+            }
+        }
+    }
+}

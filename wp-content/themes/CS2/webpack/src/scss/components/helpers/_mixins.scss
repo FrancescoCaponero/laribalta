@@ -1,0 +1,386 @@
+// debug
+@mixin debug {
+  border: 1px solid $accent3;
+}
+
+// spacing
+$num_spacing: 40;
+$unit_spacing: 4;
+
+// @todo si leva? spacings classes
+@mixin spacings-classes {
+  @for $i from 1 through $num_spacing {
+    $spacing: $i * $unit_spacing;
+
+    .m#{$spacing} {
+      margin: $spacing+px;
+    }
+
+    .ml#{$spacing} {
+      margin-left: $spacing+px;
+    }
+
+    .mr#{$spacing} {
+      margin-right: $spacing+px;
+    }
+
+    .mt#{$spacing} {
+      margin-top: $spacing+px;
+    }
+
+    .mb#{$spacing} {
+      margin-bottom: $spacing+px;
+    }
+
+    .mx#{$spacing} {
+      margin-left: $spacing+px;
+      margin-right: $spacing+px;
+    }
+
+    .my#{$spacing} {
+      margin-top: $spacing+px;
+      margin-bottom: $spacing+px;
+    }
+
+    .p#{$spacing} {
+      padding: $spacing+px;
+    }
+
+    .pl#{$spacing} {
+      padding-left: $spacing+px;
+    }
+
+    .pr#{$spacing} {
+      padding-right: $spacing+px;
+    }
+
+    .pt#{$spacing} {
+      padding-top: $spacing+px;
+    }
+
+    .pb#{$spacing} {
+      padding-bottom: $spacing+px;
+    }
+
+    .px#{$spacing} {
+      padding-left: $spacing+px;
+      padding-right: $spacing+px;
+    }
+
+    .py#{$spacing} {
+      padding-top: $spacing+px;
+      padding-bottom: $spacing+px;
+    }
+  }
+}
+
+@include spacings-classes;
+
+// flex
+@mixin flex($direction: row, $x: flex-start, $y: flex-start) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $x;
+  align-items: $y;
+}
+
+// background image standard 
+@mixin bg-image-standard {
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+// background fullscreen
+@mixin bg-fullscreen {
+  position: absolute;
+  top: 0;
+  left: calc(-50vw + 50%);
+  content: "";
+  height: 100%;
+  width: 100vw;
+  max-width: none;
+  display: block;
+  z-index: -1;
+}
+
+@mixin bg-fullscreen-white {
+  @include bg-fullscreen;
+  background-color: $white;
+}
+
+@mixin bg-fullscreen-black {
+  @include bg-fullscreen;
+  background-color: $black;
+}
+
+@mixin bg-fullscreen-neutral {
+  @include bg-fullscreen;
+  background-color: $neutral2;
+}
+
+@mixin bg-fullscreen-accent {
+  @include bg-fullscreen;
+  background-color: $accent2;
+}
+
+@mixin bg-fullscreen-primary {
+  @include bg-fullscreen;
+  background-color: $primary2;
+}
+
+@mixin bg-fullscreen-secondary {
+  @include bg-fullscreen;
+  background-color: $secondary2;
+}
+
+// typography
+@mixin h1 {
+  font: normal normal $mega-bold #{$fs-h1-d}/#{$lh-h1-d} $inter;
+
+  @include media-breakpoint-down (md) {
+    font: normal normal $mega-bold #{$fs-h1-m}/#{$lh-h1-m} $inter;
+  }
+}
+
+@mixin h2 {
+  font: normal normal $bold #{$fs-h2-d}/#{$lh-h2-d} $inter;
+
+  @include media-breakpoint-down (md) {
+    font: normal normal $bold #{$fs-h2-m}/#{$lh-h2-m} $inter;
+  }
+}
+
+@mixin h3 {
+  font: normal normal $bold #{$fs-h3-d}/#{$lh-h3-d} $inter;
+
+  @include media-breakpoint-down (md) {
+    font: normal normal $bold #{$fs-h3-m}/#{$lh-h3-m} $inter;
+  }
+}
+
+@mixin h4 {
+  font: normal normal $medium #{$fs-h4-d}/#{$lh-h4-d} $inter;
+
+  @include media-breakpoint-down (md) {
+    font: normal normal $medium #{$fs-h4-m}/#{$lh-h4-m} $inter;
+  }
+}
+
+@mixin h5 {
+  font: normal normal $medium #{$fs-h5-d}/#{$lh-h5-d} $inter;
+
+  @include media-breakpoint-down (md) {
+    font: normal normal $medium #{$fs-h5-m}/#{$lh-h5-m} $inter;
+  }
+}
+
+@mixin h6 {
+  font: normal normal $medium #{$fs-h6-d}/#{$lh-h6-d} $inter;
+
+  @include media-breakpoint-down (md) {
+    font: normal normal $medium #{$fs-h6-m}/#{$lh-h6-m} $inter;
+  }
+}
+
+@mixin p-xl {
+  font: normal normal $bold #{$fs-pxl-d}/#{$lh-pxl-d} $inter;
+
+  @include media-breakpoint-down (md) {
+    font: normal normal $bold #{$fs-pxl-m}/#{$lh-pxl-m} $inter;
+  }
+}
+
+@mixin p-l {
+  font: normal normal $medium #{$fs-pl-d}/#{$lh-pl-d} $inter;
+
+  @include media-breakpoint-down (md) {
+    font: normal normal $medium #{$fs-pl-m}/#{$lh-pl-m} $inter;
+  }
+}
+
+@mixin p-m {
+  font: normal normal $regular #{$fs-pm-d}/#{$lh-pm-d} $inter;
+
+  @include media-breakpoint-down (md) {
+    font: normal normal $regular #{$fs-pm-m}/#{$lh-pm-m} $inter;
+  }
+}
+
+@mixin p-s {
+  font: normal normal $regular #{$fs-ps-d}/#{$lh-ps-d} $inter;
+
+  @include media-breakpoint-down (md) {
+    font: normal normal $regular #{$fs-ps-m}/#{$lh-ps-m} $inter;
+  }
+}
+
+@mixin p-xs {
+  font: normal normal $regular #{$fs-pxs-d}/#{$lh-pxs-d} $inter;
+
+  @include media-breakpoint-down (md) {
+    font: normal normal $regular #{$fs-pxs-m}/#{$lh-pxs-m} $inter;
+  }
+}
+
+@mixin menu-1 {
+  font: normal normal $medium #{$fs-menu1-d}/#{$lh-menu1-d} $inter;
+
+  @include media-breakpoint-down (md) {
+    font: normal normal $medium #{$fs-menu1-m}/#{$lh-menu1-m} $inter;
+  }
+}
+
+@mixin menu-2 {
+  font: normal normal $regular #{$fs-menu2-d}/#{$lh-menu2-d} $inter;
+
+  @include media-breakpoint-down (md) {
+    font: normal normal $regular #{$fs-menu2-m}/#{$lh-menu2-m} $inter;
+  }
+}
+
+@mixin list {
+  font: normal normal $regular #{$fs-list-d}/#{$lh-list-d} $inter;
+
+  @include media-breakpoint-down (md) {
+    font: normal normal $regular #{$fs-list-m}/#{$lh-list-m} $inter;
+  }
+}
+
+@mixin buttonL {
+  font: normal normal $bold #{$fs-buttonL}/#{$lh-buttonL} $inter;
+}
+
+@mixin buttonM {
+  font: normal normal $bold #{$fs-buttonM}/#{$lh-buttonM} $inter;
+}
+
+@mixin link {
+  font: normal normal $regular #{$fs-pm-d}/#{$lh-pm-d} $inter;
+
+  @include media-breakpoint-down (md) {
+    font: normal normal $regular #{$fs-pm-m}/#{$lh-pm-m} $inter;
+  }
+}
+
+// atoms
+@mixin input {
+  @include s-all-sm(padding);
+  @include p-s;
+  border: none;
+  border-radius: 4px;
+  background-color: $neutral1;
+  border: 1px solid transparent;
+
+  &:focus {
+    outline: none;
+    border: 1px solid $neutral3;
+    background-color: transparent;
+
+    &::placeholder {
+      opacity: 0.7;
+    }
+  }
+
+  &::placeholder {
+    @include p-s;
+    color: $neutral3;
+  }
+}
+
+
+/* @todo nuovi buttons DI CS2 */
+@mixin icon-btn {
+  content: url('../src/images/icon/plus-white.svg');
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  position: relative;
+  bottom: 0px;
+}
+
+@mixin before-icon-btn {
+  &::before {
+    @include icon-btn;
+    margin-right: 12px;
+  }
+}
+
+@mixin after-icon-btn {
+  &::after {
+    @include icon-btn;
+    margin-left: 12px;
+  }
+}
+
+@mixin btn {
+  all: unset;
+  cursor: pointer;
+  @include buttonM;
+  display: inline-block;
+  @include s-y-md(padding);
+  @include s-x-lg(padding);
+  @include s-y-2xs(margin);
+  @include s-right-xs(margin);
+  border-radius: 4px;
+  transition: 0.4s all ease;
+  border: 1px solid $accent2;
+  background-color: $accent2;
+  color: $white;
+
+  &:hover {
+    border: 1px solid $black;
+    background-color: $black;
+  }
+
+  // @include before-icon-btn;
+  // @include after-icon-btn;
+}
+
+@mixin btn-primary {
+  @include btn;
+  border: 1px solid $primary2;
+  background-color: $primary2;
+  color: $white !important;
+
+  &:hover {
+    border: 1px solid $primary3;
+    background-color: $primary3;
+  }
+}
+
+@mixin btn-primary-outlined {
+  @include btn;
+  border: 1px solid $primary2;
+  background-color: transparent;
+  color: $primary2;
+
+  &:hover {
+    border: 1px solid transparent;
+    background-color: $primary3;
+  }
+}
+
+@mixin btn-secondary {
+  @include btn;
+  border: 1px solid $secondary2;
+  background-color: $secondary2;
+  color: $white !important;
+
+  &:hover {
+    border: 1px solid $secondary3;
+    background-color: $secondary3;
+  }
+}
+
+@mixin btn-secondary-outlined {
+  @include btn;
+  border: 1px solid $secondary2;
+  background-color: transparent;
+  color: $secondary2;
+
+  &:hover {
+    border: 1px solid transparent;
+    background-color: $secondary3;
+  }
+}

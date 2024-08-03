@@ -1,0 +1,111 @@
+$drupal-black: #0F0F0F;
+$drupal-blu: #0678BE;
+$drupal-white: #F6F6F2;
+
+.layout-content {
+    overflow: hidden !important;
+}
+
+.block-local-tasks-block {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 100;
+    width: 100%;
+    @include s-top-md(padding);
+    @include s-bottom-sm(padding);
+    @include flex(row, center, center);
+    background-color: $drupal-black;
+    border-top: 4px solid $drupal-blu;
+
+    ul {
+        li {
+            &.is-active {
+                a {
+                    background-color: transparent;
+                    border: 2px solid $drupal-white;
+                }
+            }
+
+            a {
+                background-color: transparent;
+                color: $drupal-white;
+                border: 2px solid transparent;
+                border-radius: 4px;
+
+                &:hover {
+                    background-color: transparent;
+                    border: 2px solid $drupal-white;
+                }
+            }
+        }
+
+        @include media-breakpoint-down(sm) {
+            @include flex(column, flex-start, center);
+
+            li {
+                margin-bottom: 8px;
+            }
+        }
+    }
+}
+
+
+.user-login-wrapper {
+    .container-fluid {
+        padding: 0px;
+    }
+}
+
+.user-type-authenticated {
+    .user-login-wrapper {
+        .container-fluid {
+            @include container-standard;
+        }
+    }
+}
+
+form.user-login-form,
+form.user-register-form {
+    @include flex(column, flex-start, center);
+    background-color: $white;
+    min-height: 75vh;
+    @include s-top-4xl(padding);
+    padding-right: 4%;
+    padding-left: 4%;
+
+    .form-item {
+        margin-top: 1em;
+        margin-bottom: 1em;
+        @include flex(column, flex-start, center);
+        color: $neutral3;
+        max-width: 360px;
+
+        @include media-breakpoint-down(sm) {
+            max-width: 100%;
+        }
+
+        input {
+            max-width: 98%;
+        }
+
+        label {
+            @include p-xl;
+            @include s-bottom-md(margin);
+            color: $black;
+            text-align: center;
+        }
+
+        .description {
+            @include p-s;
+            color: $neutral3;
+            text-align: center;
+        }
+    }
+
+    #edit-submit {
+        @include btn;
+        border: 1px solid $drupal-blu;
+        background-color: $drupal-blu;
+    }
+}

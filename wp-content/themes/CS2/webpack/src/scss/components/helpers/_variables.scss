@@ -1,0 +1,143 @@
+// palette
+$white: #FFFFFF;
+$black: #000000;
+$neutral1: #E0E0E0;
+$neutral2: #8F8F8F;
+$neutral3: #494949;
+$accent1: #FF7B5D;
+$accent2: #FF491F;
+$accent3: #AE2000;
+$primary1: #F5F4FE;
+$primary2: #D4D1E9;
+$primary3: #A39CD7;
+$secondary1: #6763FF;
+$secondary2: #591FFF;
+$secondary3: #0A0249;
+
+// font-family
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Roboto:wght@300;400;500;700;900&display=swap');
+$roboto: 'Roboto', sans-serif;
+$inter: 'Inter', sans-serif;
+
+// font-size
+$fs-h1-d: 73px;
+$fs-h2-d: 56px;
+$fs-h3-d: 42px;
+$fs-h4-d: 32px;
+$fs-h5-d: 24px;
+$fs-h6-d: 20px;
+$fs-pxl-d: 24px;
+$fs-pl-d: 19px;
+$fs-pm-d: 16px;
+$fs-ps-d: 15px;
+$fs-pxs-d: 13px;
+$fs-menu1-d: 18px;
+$fs-menu2-d: 16px;
+$fs-list-d: 16px;
+$fs-h1-m: 48px;
+$fs-h2-m: 36px;
+$fs-h3-m: 28px;
+$fs-h4-m: 24px;
+$fs-h5-m: 22px;
+$fs-h6-m: 20px;
+$fs-pxl-m: 24px;
+$fs-pl-m: 19px;
+$fs-pm-m: 16px;
+$fs-ps-m: 15px;
+$fs-pxs-m: 13px;
+$fs-menu1-m: 19px;
+$fs-menu2-m: 16px;
+$fs-list-m: 16px;
+$fs-buttonL: 19px;
+$fs-buttonM: 16px;
+
+// line-height
+$lh-h1-d: 80px;
+$lh-h2-d: 62px;
+$lh-h3-d: 46px;
+$lh-h4-d: 35px;
+$lh-h5-d: 26px;
+$lh-h6-d: 22px;
+$lh-pxl-d: 26px;
+$lh-pl-d: 27px;
+$lh-pm-d: 22px;
+$lh-ps-d: 21px;
+$lh-pxs-d: 18px;
+$lh-menu1-d: 25px;
+$lh-menu2-d: 22px;
+$lh-list-d: 22px;
+$lh-h1-m: 53px;
+$lh-h2-m: 40px;
+$lh-h3-m: 31px;
+$lh-h4-m: 26px;
+$lh-h5-m: 24px;
+$lh-h6-m: 22px;
+$lh-pxl-m: 26px;
+$lh-pl-m: 27px;
+$lh-pm-m: 22px;
+$lh-ps-m: 21px;
+$lh-pxs-m: 18px;
+$lh-menu1-m: 27px;
+$lh-menu2-m: 22px;
+$lh-list-m: 22px;
+$lh-buttonL: 19px;
+$lh-buttonM: 16px;
+
+// font-weight
+$light: 300;
+$regular: 400;
+$medium: 500;
+$semi-bold: 600;
+$bold: 700;
+$extra-bold: 800;
+$mega-bold: 900;
+
+// header
+$headerHeightDesktop: 128px;
+$headerHeightMobile: 128px;
+
+// spacings variables
+// base
+$base-spacing: 4;
+// Moltiplicatori per la scala di spaziature
+$spacing-multipliers: (
+  "2xs": 1,  // 4px
+  "xs": 2,   // 8px
+  "sm": 3,   // 12px
+  "md": 4,   // 16px
+  "lg": 6,   // 24px
+  "xl": 8,   // 32px
+  "2xl": 10, // 40px
+  "3xl": 12, // 48px
+  "4xl": 14, // 56px
+  "5xl": 16, // 64px
+  "6xl": 20, // 80px
+  "7xl": 24, // 96px
+  "8xl": 30, // 120px
+  "9xl": 36, // 144px
+  "10xl": 44 // 176px
+);
+
+// Assegnazione manuale dei valori a variabili specifiche
+$xs2: #{map-get($spacing-multipliers, "2xs") * $base-spacing}px;
+$xs: #{map-get($spacing-multipliers, "xs") * $base-spacing}px;
+$sm: #{map-get($spacing-multipliers, "sm") * $base-spacing}px;
+$md: #{map-get($spacing-multipliers, "md") * $base-spacing}px;
+$lg: #{map-get($spacing-multipliers, "lg") * $base-spacing}px;
+$xl: #{map-get($spacing-multipliers, "xl") * $base-spacing}px;
+$xl2: #{map-get($spacing-multipliers, "2xl") * $base-spacing}px;
+$xl3: #{map-get($spacing-multipliers, "3xl") * $base-spacing}px;
+$xl4: #{map-get($spacing-multipliers, "4xl") * $base-spacing}px;
+$xl5: #{map-get($spacing-multipliers, "5xl") * $base-spacing}px;
+$xl6: #{map-get($spacing-multipliers, "6xl") * $base-spacing}px;
+$xl7: #{map-get($spacing-multipliers, "7xl") * $base-spacing}px;
+$xl8: #{map-get($spacing-multipliers, "8xl") * $base-spacing}px;
+$xl9: #{map-get($spacing-multipliers, "9xl") * $base-spacing}px;
+$xl10: #{map-get($spacing-multipliers, "10xl") * $base-spacing}px;
+
+
+// TOTAL COLUMNS
+$total-columns: 12;
+// GUTTER WIDTH
+$gutter-width: $xl;

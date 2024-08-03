@@ -1,0 +1,12 @@
+.section__tt__wrapper {
+  @include s-y-5xl(padding);
+  @include row;
+  .column-tt-col {
+    @include col-6;
+
+    @include media-breakpoint-down(md) {
+      @include col-12;
+      @include s-y-xl(padding);
+    }
+  }
+}

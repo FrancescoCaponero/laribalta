@@ -1,0 +1,20 @@
+.container-standard{
+    @include container-standard;
+}
+
+.row{
+    @include row;
+}
+
+.col-12 { @include make-col(12); }
+.col-11 { @include make-col(11); }
+.col-10 { @include make-col(10); }
+.col-9  { @include make-col(9);  }
+.col-8  { @include make-col(8);  }
+.col-7  { @include make-col(7);  }
+.col-6  { @include make-col(6);  }
+.col-5  { @include make-col(5);  }
+.col-4  { @include make-col(4);  }
+.col-3  { @include make-col(3);  }
+.col-2  { @include make-col(2);  }
+.col-1  { @include make-col(1);  }

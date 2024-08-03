@@ -1,0 +1,12 @@
+/*-- GAPS --*/
+//classi
+@mixin generate-gap($size) {
+  .gap-#{$size} {
+    column-gap: #{$size}px;
+  }
+}
+
+// Mixin per applicare un gap specifico
+@mixin gap($size) {
+  gap: #{$size}px;
+}

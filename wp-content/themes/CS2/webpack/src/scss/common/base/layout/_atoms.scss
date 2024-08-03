@@ -1,0 +1,42 @@
+header,
+main,
+footer,
+.wrapper-menu-mobile {
+    input {
+        @include input;
+    }
+
+    .wrapper-input-search {
+        @include flex(row, flex-start, center);
+        position: relative;
+
+        .input-search-icon {
+            position: absolute;
+            left: 12px;
+        }
+
+        input[type="search"] {
+            @include s-y-sm(padding);
+            @include s-right-sm(padding);
+            @include s-left-xl(padding);
+        }
+    }
+
+    button,
+    .btn {
+        @include btn;
+    }
+
+    .btn-primary{
+        @include btn-primary;
+    }
+    .btn-primary-outlined{
+        @include btn-primary-outlined;
+    }
+    .btn-secondary{
+        @include btn-secondary;
+    }
+    .btn-secondary-outlined{
+        @include btn-secondary-outlined;
+    }
+}

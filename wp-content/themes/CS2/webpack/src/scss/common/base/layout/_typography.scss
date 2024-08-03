@@ -1,0 +1,78 @@
+header,
+main,
+footer,
+.wrapper-menu-mobile {
+    h1 {
+        @include h1;
+    }
+
+    h2 {
+        @include h2;
+    }
+
+    h3 {
+        @include h3;
+    }
+
+    h4 {
+        @include h4;
+    }
+
+    h5 {
+        @include h5;
+    }
+
+    h6 {
+        @include h6;
+    }
+
+    p {
+        @include p-m;
+    }
+
+    ul {
+        @include list;
+        padding: 0;
+        li {
+            list-style-image: url(../src/images/required.svg);            
+            list-style-position: inside;
+        }
+        &.ul--inline {
+            display: flex;
+            li:not(:first-of-type){
+                margin-left: 8px;
+            }
+        }
+    }
+}
+
+header,
+footer,
+.wrapper-menu-mobile {
+    ul {
+        all: unset;
+
+        li {
+            all: unset;
+
+            a,
+            span {
+                @include list;
+            }
+        }
+    }
+
+    a,
+    span,
+    label {
+        all: unset;
+        @include link;
+    }
+}
+
+main {
+    a {
+        @include p-m;
+        color: $accent2;
+    }
+}
