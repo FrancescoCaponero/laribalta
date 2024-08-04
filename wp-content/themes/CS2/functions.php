@@ -196,13 +196,10 @@ function cs2_custom_css()
     }
     wp_enqueue_style('swiper-css', get_stylesheet_directory_uri() . '/webpack/dist/libraries/swiper/swiper-bundle.min.css');
     wp_enqueue_style('backend-style', get_stylesheet_directory_uri() . '/webpack/dist/app.css');
-    wp_enqueue_style('font-awesome', 'https://use.fontawesome.com/releases/v5.15.3/css/all.css');
-
-
+    wp_enqueue_style('font-awesome', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css');
 }
 
 add_action('wp_head', 'cs2_custom_js');
-
 function cs2_custom_js()
 {
     wp_enqueue_script('jquery', '/wp-includes/js/jquery/jquery.js', '', '', ['in-footer' => true]);
@@ -211,27 +208,6 @@ function cs2_custom_js()
     wp_enqueue_script('js_custom', get_stylesheet_directory_uri() . '/webpack/dist/app.js');
 }
 
-
-/* Corilla LEGALS
--------------------------------------------------------- */
-
-add_action('wp_head', 'cs2_corilla_legals_js_head');
-function cs2_corilla_legals_js_head()
-{
-    ?>
-    <script src="https://legals.corilla.it/data.js"></script>
-    <script src="https://legals.corilla.it/corilla-legals-manager.js" data-type="cookie"></script>
-    <?php
-}
-
-function add_menu_social_icons($item_output, $item, $depth, $args)
-{
-    if ('social-menu' === $args->theme_location && $item->type == 'custom') {
-        return '<a href="' . $item->url . '"><i class="fab ' . $item->title . '"></i></a>';
-    }
-    return $item_output;
-}
-add_filter('walker_nav_menu_start_el', 'add_menu_social_icons', 10, 4);
 
 /* TinyMCE Styling
 -------------------------------------------------------- */
@@ -265,7 +241,7 @@ add_action('init', 'cs2_category_pagination_rewrite_rules');
 /* CSP head
 -------------------------------------------------------- */
 
-function CS2_csp_headers()
+/* function CS2_csp_headers()
 {
     $default_src = "'self'";
     $script_src = "'self' 'report-sample' 'unsafe-inline' https://cdn.iubenda.com https://cs.iubenda.com https://kit.fontawesome.com https://legals.corilla.it https://use.fontawesome.com https://www.iubenda.com";
@@ -296,7 +272,7 @@ function CS2_csp_headers()
     echo '<meta http-equiv="Content-Security-Policy" content="' . $csp . '">';
 }
 
-add_filter('wp_head', 'CS2_csp_headers');
+add_filter('wp_head', 'CS2_csp_headers'); */
 
 /* Corilla Image Sitemap
 -------------------------------------------------------- */
