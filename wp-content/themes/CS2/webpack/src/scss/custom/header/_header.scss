@@ -81,10 +81,8 @@ header {
             .block-system-branding-block {
                 svg,
                 img {
-                    height: auto;
+                    height: 30px;
                     width: 100%;
-                    max-width: 220px;
-                    height: 80px;
                 }
                 .custom-logo{
                     @include media-breakpoint-down(lg) {

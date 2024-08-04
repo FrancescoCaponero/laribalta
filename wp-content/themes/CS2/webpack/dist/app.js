@@ -535,7 +535,7 @@ jQuery(document).ready(function ($) {
   });
   document.addEventListener("wpcf7mailsent", function (event) {
     setTimeout(function () {
-      location = "/grazie";
+      location = "/grazie/";
     }, 1000);
   }, false);
 });

@@ -136,130 +136,130 @@ $unit_spacing: 4;
 
 // typography
 @mixin h1 {
-  font: normal normal $mega-bold #{$fs-h1-d}/#{$lh-h1-d} $inter;
+  font: normal normal $mega-bold #{$fs-h1-d}/#{$lh-h1-d} $jost;
 
   @include media-breakpoint-down (md) {
-    font: normal normal $mega-bold #{$fs-h1-m}/#{$lh-h1-m} $inter;
+    font: normal normal $mega-bold #{$fs-h1-m}/#{$lh-h1-m} $jost;
   }
 }
 
 @mixin h2 {
-  font: normal normal $bold #{$fs-h2-d}/#{$lh-h2-d} $inter;
+  font: normal normal $bold #{$fs-h2-d}/#{$lh-h2-d} $jost;
 
   @include media-breakpoint-down (md) {
-    font: normal normal $bold #{$fs-h2-m}/#{$lh-h2-m} $inter;
+    font: normal normal $bold #{$fs-h2-m}/#{$lh-h2-m} $jost;
   }
 }
 
 @mixin h3 {
-  font: normal normal $bold #{$fs-h3-d}/#{$lh-h3-d} $inter;
+  font: normal normal $bold #{$fs-h3-d}/#{$lh-h3-d} $jost;
 
   @include media-breakpoint-down (md) {
-    font: normal normal $bold #{$fs-h3-m}/#{$lh-h3-m} $inter;
+    font: normal normal $bold #{$fs-h3-m}/#{$lh-h3-m} $jost;
   }
 }
 
 @mixin h4 {
-  font: normal normal $medium #{$fs-h4-d}/#{$lh-h4-d} $inter;
+  font: normal normal $medium #{$fs-h4-d}/#{$lh-h4-d} $jost;
 
   @include media-breakpoint-down (md) {
-    font: normal normal $medium #{$fs-h4-m}/#{$lh-h4-m} $inter;
+    font: normal normal $medium #{$fs-h4-m}/#{$lh-h4-m} $jost;
   }
 }
 
 @mixin h5 {
-  font: normal normal $medium #{$fs-h5-d}/#{$lh-h5-d} $inter;
+  font: normal normal $medium #{$fs-h5-d}/#{$lh-h5-d} $jost;
 
   @include media-breakpoint-down (md) {
-    font: normal normal $medium #{$fs-h5-m}/#{$lh-h5-m} $inter;
+    font: normal normal $medium #{$fs-h5-m}/#{$lh-h5-m} $jost;
   }
 }
 
 @mixin h6 {
-  font: normal normal $medium #{$fs-h6-d}/#{$lh-h6-d} $inter;
+  font: normal normal $medium #{$fs-h6-d}/#{$lh-h6-d} $jost;
 
   @include media-breakpoint-down (md) {
-    font: normal normal $medium #{$fs-h6-m}/#{$lh-h6-m} $inter;
+    font: normal normal $medium #{$fs-h6-m}/#{$lh-h6-m} $jost;
   }
 }
 
 @mixin p-xl {
-  font: normal normal $bold #{$fs-pxl-d}/#{$lh-pxl-d} $inter;
+  font: normal normal $bold #{$fs-pxl-d}/#{$lh-pxl-d} $jost;
 
   @include media-breakpoint-down (md) {
-    font: normal normal $bold #{$fs-pxl-m}/#{$lh-pxl-m} $inter;
+    font: normal normal $bold #{$fs-pxl-m}/#{$lh-pxl-m} $jost;
   }
 }
 
 @mixin p-l {
-  font: normal normal $medium #{$fs-pl-d}/#{$lh-pl-d} $inter;
+  font: normal normal $medium #{$fs-pl-d}/#{$lh-pl-d} $jost;
 
   @include media-breakpoint-down (md) {
-    font: normal normal $medium #{$fs-pl-m}/#{$lh-pl-m} $inter;
+    font: normal normal $medium #{$fs-pl-m}/#{$lh-pl-m} $jost;
   }
 }
 
 @mixin p-m {
-  font: normal normal $regular #{$fs-pm-d}/#{$lh-pm-d} $inter;
+  font: normal normal $regular #{$fs-pm-d}/#{$lh-pm-d} $jost;
 
   @include media-breakpoint-down (md) {
-    font: normal normal $regular #{$fs-pm-m}/#{$lh-pm-m} $inter;
+    font: normal normal $regular #{$fs-pm-m}/#{$lh-pm-m} $jost;
   }
 }
 
 @mixin p-s {
-  font: normal normal $regular #{$fs-ps-d}/#{$lh-ps-d} $inter;
+  font: normal normal $regular #{$fs-ps-d}/#{$lh-ps-d} $jost;
 
   @include media-breakpoint-down (md) {
-    font: normal normal $regular #{$fs-ps-m}/#{$lh-ps-m} $inter;
+    font: normal normal $regular #{$fs-ps-m}/#{$lh-ps-m} $jost;
   }
 }
 
 @mixin p-xs {
-  font: normal normal $regular #{$fs-pxs-d}/#{$lh-pxs-d} $inter;
+  font: normal normal $regular #{$fs-pxs-d}/#{$lh-pxs-d} $jost;
 
   @include media-breakpoint-down (md) {
-    font: normal normal $regular #{$fs-pxs-m}/#{$lh-pxs-m} $inter;
+    font: normal normal $regular #{$fs-pxs-m}/#{$lh-pxs-m} $jost;
   }
 }
 
 @mixin menu-1 {
-  font: normal normal $medium #{$fs-menu1-d}/#{$lh-menu1-d} $inter;
+  font: normal normal $medium #{$fs-menu1-d}/#{$lh-menu1-d} $jost;
 
   @include media-breakpoint-down (md) {
-    font: normal normal $medium #{$fs-menu1-m}/#{$lh-menu1-m} $inter;
+    font: normal normal $medium #{$fs-menu1-m}/#{$lh-menu1-m} $jost;
   }
 }
 
 @mixin menu-2 {
-  font: normal normal $regular #{$fs-menu2-d}/#{$lh-menu2-d} $inter;
+  font: normal normal $regular #{$fs-menu2-d}/#{$lh-menu2-d} $jost;
 
   @include media-breakpoint-down (md) {
-    font: normal normal $regular #{$fs-menu2-m}/#{$lh-menu2-m} $inter;
+    font: normal normal $regular #{$fs-menu2-m}/#{$lh-menu2-m} $jost;
   }
 }
 
 @mixin list {
-  font: normal normal $regular #{$fs-list-d}/#{$lh-list-d} $inter;
+  font: normal normal $regular #{$fs-list-d}/#{$lh-list-d} $jost;
 
   @include media-breakpoint-down (md) {
-    font: normal normal $regular #{$fs-list-m}/#{$lh-list-m} $inter;
+    font: normal normal $regular #{$fs-list-m}/#{$lh-list-m} $jost;
   }
 }
 
 @mixin buttonL {
-  font: normal normal $bold #{$fs-buttonL}/#{$lh-buttonL} $inter;
+  font: normal normal $bold #{$fs-buttonL}/#{$lh-buttonL} $jost;
 }
 
 @mixin buttonM {
-  font: normal normal $bold #{$fs-buttonM}/#{$lh-buttonM} $inter;
+  font: normal normal $bold #{$fs-buttonM}/#{$lh-buttonM} $jost;
 }
 
 @mixin link {
-  font: normal normal $regular #{$fs-pm-d}/#{$lh-pm-d} $inter;
+  font: normal normal $regular #{$fs-pm-d}/#{$lh-pm-d} $jost;
 
   @include media-breakpoint-down (md) {
-    font: normal normal $regular #{$fs-pm-m}/#{$lh-pm-m} $inter;
+    font: normal normal $regular #{$fs-pm-m}/#{$lh-pm-m} $jost;
   }
 }
 
@@ -315,7 +315,7 @@ $unit_spacing: 4;
 
 @mixin btn {
   all: unset;
-  cursor: pointer;
+  cursor: pojost;
   @include buttonM;
   display: inline-block;
   @include s-y-md(padding);
