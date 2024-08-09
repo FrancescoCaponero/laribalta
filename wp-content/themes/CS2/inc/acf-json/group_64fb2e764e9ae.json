@@ -1190,6 +1190,44 @@
                             ],
                             "min": "",
                             "max": ""
+                        },
+                        "layout_66b60ebeb11ed": {
+                            "key": "layout_66b60ebeb11ed",
+                            "name": "post_type_selector",
+                            "label": "Seleziona il tipo di Post che vuoi vedere",
+                            "display": "row",
+                            "sub_fields": [
+                                {
+                                    "key": "field_66b60ec1b11ef",
+                                    "label": "Post Type Selector",
+                                    "name": "post_type_selector",
+                                    "aria-label": "",
+                                    "type": "select",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "choices": {
+                                        "courses": "Formazione",
+                                        "project": "Progetti",
+                                        "show": "Spettacoli",
+                                        "cpt_none": "Nessuno"
+                                    },
+                                    "default_value": "cpt_none",
+                                    "return_format": "value",
+                                    "multiple": 0,
+                                    "allow_null": 0,
+                                    "ui": 0,
+                                    "ajax": 0,
+                                    "placeholder": ""
+                                }
+                            ],
+                            "min": "",
+                            "max": ""
                         }
                     },
                     "min": "",
@@ -1544,5 +1582,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1716293627
+    "modified": 1723208870
 }

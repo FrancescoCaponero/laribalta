@@ -62,6 +62,27 @@
                 "operator": "==",
                 "value": "post"
             }
+        ],
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "courses"
+            }
+        ],
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "project"
+            }
+        ],
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "show"
+            }
         ]
     ],
     "menu_order": 0,
@@ -73,5 +94,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1716286115
+    "modified": 1723207573
 }
