@@ -1,10 +1,18 @@
+<div class="prefooter">
+<div class="container-standard">
+        <div class="row">
+            <div class="col-12">
+        </div>
+    </div>
+</div>
+
+</div>
 <footer role="contentinfo" class="footer-configuration-1">
-    <div class="bg-fullscreen-secondary"></div>
+    <div class="bg-fullscreen-white"></div>
     <div class="container-standard">
         <div class="row">
             <div class="col-12">
                 <div class="footer__wrapper">
-                    <div class="footer__wrapper__up">
                         <div class="footer__wrapper__logo">
                             <a href="<?php print get_home_url() ?>" rel="noopener">
                                 <?php if (null != ($args['footerlogo'])) { ?>
@@ -16,21 +24,8 @@
                                 <?php } ?>
                             </a>
                         </div>
-                    </div>
-                    <div class="footer__wrapper__info">
-                        <div class="footer__wrapper__position">
-                            <?php get_template_part('template/_partials/address') ?>
-                        </div>
                         <div class="footer__wrapper__contacts">
-                            <?php get_template_part('template/_partials/tel') ?>
-                            <?php get_template_part('template/_partials/mail') ?>
-                        </div>
-                        <div class="footer__wrapper__credits">
-                        <?php print printFooterMenu(); ?>
-                            <?php get_template_part('template/_partials/credits') ?>
-                        </div>
-                        <div class="footer__wrapper__social">                            
-                            <?php print printSocialMenu(); ?>
+                           <p>© <?php echo date('Y'); ?> La Ribalta Teatro. Tutti i diritti riservati.</p>
                         </div>
                     </div>
                 </div>

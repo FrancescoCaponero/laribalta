@@ -8,6 +8,7 @@ require_once ('inc/functions_tmce.php');
 require_once ('inc/functions_cs2.php');
 require_once ('inc/functions_custom_backend_style.php');
 require_once ('inc/functions_yoast.php');
+require_once ('inc/functions_shortcode.php');
 
 /* Setup Theme
 -------------------------------------------------------- */

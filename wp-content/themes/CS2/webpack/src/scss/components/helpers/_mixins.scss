@@ -152,10 +152,10 @@ $unit_spacing: 4;
 }
 
 @mixin h3 {
-  font: normal normal $bold #{$fs-h3-d}/#{$lh-h3-d} $jost;
+  font: normal normal $light #{$fs-h3-d}/#{$lh-h3-d} $jost;
 
   @include media-breakpoint-down (md) {
-    font: normal normal $bold #{$fs-h3-m}/#{$lh-h3-m} $jost;
+    font: normal normal $light #{$fs-h3-m}/#{$lh-h3-m} $jost;
   }
 }
 

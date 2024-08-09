@@ -12,6 +12,7 @@ footer,
 
     h3 {
         @include h3;
+        margin-bottom: 24px;
     }
 
     h4 {
@@ -34,8 +35,7 @@ footer,
         @include list;
         padding: 0;
         li {
-            list-style-image: url(../src/images/required.svg);            
-            list-style-position: inside;
+          list-style: none;
         }
         &.ul--inline {
             display: flex;

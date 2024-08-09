@@ -40,11 +40,6 @@ $hero_page_class = (empty($hero_image_bg) && empty($hero_video_bg)) ? 'remove-ba
             <div class="col-12">
                 <div class="hero__page">
                     <div class="hero__page__text">
-                        <?php if (!empty($page_hero_title)) { ?>
-                            <h1 class="hero__page__text__title">
-                                <?php print $page_hero_title ?>
-                            </h1>
-                        <?php } ?>
                         <?php if (!empty($args['page_subtitle'])) { ?>
                             <div class="hero__page__text__subtitle">
                                 <?php print $args['page_subtitle'] ?>
